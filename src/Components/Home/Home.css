@@ -1,0 +1,31 @@
+.img-size{
+    width: 100%;
+    height: 25rem;
+}
+.slider{
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    overflow: hidden;
+}
+.slider-item{
+    box-sizing: initial;
+    display: flex;
+    flex: none;
+    scroll-snap-align: start;
+}
+.banner::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background-color:rgba(0,0,0,.2)
+}
+.container-layout{
+    margin-right: 6rem;
+    margin-left: 6rem;
+}
