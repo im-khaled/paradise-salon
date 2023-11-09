@@ -6,6 +6,8 @@ import Blog from '../Components/Blog/Blog';
 import Contact from '../Components/Contact/Contact';
 import Team from '../Components/Team/Team';
 import AllService from '../Components/Services/AllService';
+import Login from '../Components/Authentication/Login';
+import Register from '../Components/Register/Register';
 
 
 
@@ -33,6 +35,14 @@ const routes = createBrowserRouter([
             {
                 path:'/services',
                 element:<AllService></AllService>
+            },
+            {
+                path:'/login',
+                element: <Login></Login>
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
             }
         ]
     }
