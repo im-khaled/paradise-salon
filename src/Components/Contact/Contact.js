@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaPhoneAlt, FaMailBulk } from 'react-icons/fa';
+import useTitle from '../Hooks/useTitle';
 const Contact = () => {
+    useTitle('Contact')
     return (
         <div>
                 <div className='my-10 bg-amber-500 text-white text-center h-24'>

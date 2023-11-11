@@ -8,6 +8,9 @@ import Team from '../Components/Team/Team';
 import AllService from '../Components/Services/AllService';
 import Login from '../Components/Authentication/Login';
 import Register from '../Components/Register/Register';
+import PrivateRaute from './PrivateRaute';
+import AddAService from '../Components/AddAService/AddAService';
+import ServiceDetails from '../Components/Services/ServiceDetails';
 
 
 
@@ -43,6 +46,15 @@ const routes = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/serviceDetails/:id',
+                element:<ServiceDetails></ServiceDetails>,
+                loader: ({params})=>fetch(`http://localhost:8080/serviceDetails/${params.id}`)
+            },
+            {
+                path:'/addService',
+                element:<PrivateRaute><AddAService></AddAService></PrivateRaute>
             }
         ]
     }

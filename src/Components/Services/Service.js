@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Service = ({popularServices}) => {
     
@@ -14,7 +15,7 @@ const Service = ({popularServices}) => {
                 <p className='pe-4'>Price: $ {popularServices.price}</p>
             </div>
 
-            <button className='btn bg-amber-500 w-full text-white py-2 text-xl hover:bg-amber-400'>View Details</button>
+            <Link to={`/serviceDetails/${popularServices._id}`}><button className='btn bg-amber-500 w-full text-white py-2 text-xl hover:bg-amber-400'>View Details</button></Link>
         </div>
     );
 };

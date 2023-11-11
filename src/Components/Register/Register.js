@@ -3,8 +3,10 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { authProvider } from '../../Context/AuthContext';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../Hooks/useTitle';
 
 const Register = () => {
+    useTitle('Register')
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const location = useLocation();

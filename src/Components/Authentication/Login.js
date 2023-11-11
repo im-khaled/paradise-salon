@@ -3,8 +3,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { authProvider } from '../../Context/AuthContext';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../Hooks/useTitle';
 
 const Login = () => {
+    useTitle('Login');
     const {GoogleSignIn, GithubSignIn,signInWithEmail} = useContext(authProvider);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -17,7 +19,7 @@ const Login = () => {
         const form = event.target;
         const name = form.name.value;
         const password = form.password.value;
-        
+
         signInWithEmail(name, password)
             .then(userCread => {
                 const user = userCread.user;

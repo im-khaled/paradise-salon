@@ -3,9 +3,11 @@ import "./Home.css";
 import { FaLessThan, FaGreaterThan } from 'react-icons/fa';
 import { authProvider } from '../../Context/AuthContext';
 import Service from '../Services/Service';
+import useTitle from '../Hooks/useTitle';
 
 
 const Home = () => {
+    useTitle('Home');
     const {services} = useContext(authProvider);
     
     return (

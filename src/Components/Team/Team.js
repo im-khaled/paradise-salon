@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
+import useTitle from '../Hooks/useTitle';
 
 const Team = () => {
+    useTitle('Team')
     return (
         <div>
             <div className='my-10 bg-amber-500 text-white text-center h-24'>
