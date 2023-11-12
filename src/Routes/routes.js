@@ -12,6 +12,7 @@ import PrivateRaute from './PrivateRaute';
 import AddAService from '../Components/AddAService/AddAService';
 import ServiceDetails from '../Components/Services/ServiceDetails';
 import Review from '../Components/MyReview/Review';
+import ErrorPage from '../Components/ErrorPage/ErrorPage';
 
 
 
@@ -62,6 +63,10 @@ const routes = createBrowserRouter([
                 element:<PrivateRaute><AddAService></AddAService></PrivateRaute>
             }
         ]
+    },
+    {
+        path:'*',
+        element:<ErrorPage></ErrorPage>
     }
 
 

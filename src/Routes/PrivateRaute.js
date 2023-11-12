@@ -15,7 +15,7 @@ const PrivateRaute = ({children}) => {
       </div>);
     }
     if(!user?.emailVerified){
-      return(<Navigate to='/signIn' state={{from: location}}  replace></Navigate>)
+      return(<Navigate to='/login' state={{from: location}}  replace></Navigate>)
     }
 
     return (children);

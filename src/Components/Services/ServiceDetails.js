@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useLocation } from 'react-router-dom';
 import { authProvider } from '../../Context/AuthContext';
 import Testimonial from '../MyReview/Testimonial';
 
 const ServiceDetails = () => {
+    const location = useLocation();
     const{user} = useContext(authProvider)
     const loaderData = useLoaderData();
     const sigleSevice = loaderData.service;
@@ -116,7 +117,7 @@ const ServiceDetails = () => {
 
                         :
                         <div className='text-center mb-10'>
-                            <button className='text-2xl font-bold text-center'>Please <Link className='bg-amber-500 p-1 px-4 rounded-lg text-white' to='/login'>login</Link> to add a review.</button>
+                            <button className='text-2xl font-bold text-center'>Please <Link className='bg-amber-500 p-1 px-4 rounded-lg text-white' state={{from: location}} to='/login'>login</Link> to add a review.</button>
                         </div>
                     }
                     </section>

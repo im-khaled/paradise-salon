@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { authProvider } from '../../Context/AuthContext';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import useTitle from '../Hooks/useTitle';
@@ -13,7 +13,7 @@ const Register = () => {
     const nevigate = useNavigate();
     const from = location.state?.from?.pathname || '/';
 
-    const {signUpWithEmail, GoogleSignIn, GithubSignIn} = useContext(authProvider);
+    const {user, signUpWithEmail, GoogleSignIn, GithubSignIn} = useContext(authProvider);
 
     const handleSignup = (event) =>{
         event.preventDefault();
@@ -46,8 +46,14 @@ const Register = () => {
     } 
 
 
-    return (
-        <div className='mt-10'>
+    return (<>
+            {
+                user?.uid? <>
+                <Navigate to='/' replace></Navigate>
+                
+                </>:
+                <>
+                <div className='mt-10'>
             <div className='flex justify-center'>
             <div className='container-layout py-16 w-1/3'>
                 <div className=' border p-8 shadow-md'>
@@ -86,6 +92,11 @@ const Register = () => {
             </div>
         </div>
         </div>
+                </>
+            }
+    
+    </>
+        
     );
 };
 

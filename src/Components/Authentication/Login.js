@@ -7,7 +7,7 @@ import useTitle from '../Hooks/useTitle';
 
 const Login = () => {
     useTitle('Login');
-    const {GoogleSignIn, GithubSignIn,signInWithEmail} = useContext(authProvider);
+    const {user,GoogleSignIn, GithubSignIn,signInWithEmail} = useContext(authProvider);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const location = useLocation();
@@ -44,7 +44,15 @@ const Login = () => {
     } 
     return (
         <div className='flex justify-center mt-10'>
-            <div className='container-layout py-16 w-1/3'>
+            {
+               user?.uid?<>
+                <div className='my-10 bg-amber-500 text-white text-center h-24'>
+                    <div className='h-full flex justify-center items-center text-4xl p-5 font-semibold'>
+                        <p>Please Verify Your Email First</p>
+                    </div>
+                </div>
+               </>:<>
+                    <div className='container-layout py-16 w-1/3'>
                 <div className=' border p-8 shadow-md'>
                     <h3 className='text-xl font-semibold pb-8'>Login here</h3>
                     <form onSubmit={(event)=>handleEmailSignIn(event)}>
@@ -76,6 +84,9 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+               
+               </> 
+            }
         </div>
     );
 };

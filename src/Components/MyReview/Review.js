@@ -25,9 +25,21 @@ const Review = () => {
 
     },[user?.email])
 
-    const handleReviewDelete = ( _id, serviceName) => {
-
-
+    const handleReviewDelete = ( id, serviceName) => {
+        const agree = window.confirm(`Are your sure, you want delete ${serviceName}`)
+        if(agree){fetch(`http://localhost:8080/remove/${id}`,{
+            method:'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.deletedCount > 0){
+                alert('successfully Deleted')
+               const remeiningReview = reviews.filter(review => review._id !== id) 
+                setReviews(remeiningReview);
+            }
+        })
+        .catch(e => console.error(e))
+        }
     }
 
 

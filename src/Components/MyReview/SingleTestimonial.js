@@ -4,13 +4,13 @@ const SingleTestimonial = ({review}) => {
     const{photoUrl, name, rating, addedReview, date} = review; 
     console.log(photoUrl);
     return (
-        <div className="mb-2 shadow-md border rounded-t-8xl rounded-b-5xl overflow-hidden">
+        <div className="mb-2 shadow-md border rounded overflow-hidden">
             <div className="pt-3 pb-3 md:pb-1 px-4 md:px-16 bg-white bg-opacity-40">
                 <div className="flex flex-col items-center">
                     <img className=" w-24 rounded-full shadow-md mt-6 mb-4" src={photoUrl} alt="" />
                     <div className='flex flex-col justify-center items-center'>
                         <h4 className="w-full md:w-auto text-xl font-heading font-medium">{name}</h4>
-                        <div className='flex justify-center items-center mt-6 bg-yellow-300 px-6'>
+                        <div className='flex justify-center rounded items-center mt-6 bg-amber-300 px-6'>
                             <p>Your Rating</p>
                             <div className="w-full md:w-px h-2 md:h-8 mx-8 bg-transparent md:bg-gray-900"></div>
                             <span className="mr-4 text-xl font-heading font-medium">{rating} Out of 5.0</span>
