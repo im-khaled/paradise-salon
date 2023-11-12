@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { authProvider } from '../../Context/AuthContext';
+import Testimonial from '../MyReview/Testimonial';
 
 const ServiceDetails = () => {
     const{user} = useContext(authProvider)
-    const sigleSevice = useLoaderData();
+    const loaderData = useLoaderData();
+    const sigleSevice = loaderData.service;
+    const reviews = loaderData.reviews;
     const {Name, description, rating, price, image, _id} = sigleSevice;
 
     const handleSubmitReview = (e) => {
@@ -49,7 +52,7 @@ const ServiceDetails = () => {
             })
         e.target.reset();
     }
-    console.log(sigleSevice);
+    
     return (
         <div>
                <div className='my-10 bg-amber-500 text-white text-center h-24'>
@@ -88,7 +91,7 @@ const ServiceDetails = () => {
                             Price: ${price}
                         </p>
                     </div>
-                    <section className="py-24 2xl:py-44 bg-blueGray-100 rounded-t-10xl overflow-hidden w-full">
+                <section className="py-24 2xl:py-44 bg-blueGray-100 rounded-t-10xl overflow-hidden w-full">
                     {
                     user ? <>
                         <div className='text-center text-lg mb-4 font-semibold'>
@@ -115,11 +118,16 @@ const ServiceDetails = () => {
                         <div className='text-center mb-10'>
                             <button className='text-2xl font-bold text-center'>Please <Link className='bg-amber-500 p-1 px-4 rounded-lg text-white' to='/login'>login</Link> to add a review.</button>
                         </div>
-                }
+                    }
                     </section>
                 </div>
             </div>
                 </div>
+                {
+                    reviews && <>
+                        <Testimonial reviews={reviews}></Testimonial>
+                    </>
+                }
         </div>
     );
 };
