@@ -11,6 +11,7 @@ import Register from '../Components/Register/Register';
 import PrivateRaute from './PrivateRaute';
 import AddAService from '../Components/AddAService/AddAService';
 import ServiceDetails from '../Components/Services/ServiceDetails';
+import Review from '../Components/MyReview/Review';
 
 
 
@@ -51,6 +52,10 @@ const routes = createBrowserRouter([
                 path:'/serviceDetails/:id',
                 element:<ServiceDetails></ServiceDetails>,
                 loader: ({params})=>fetch(`http://localhost:8080/serviceDetails/${params.id}`)
+            },
+            {
+                path:'/reviews',
+                element:<Review></Review>
             },
             {
                 path:'/addService',

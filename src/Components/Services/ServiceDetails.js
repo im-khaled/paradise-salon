@@ -5,7 +5,7 @@ import { authProvider } from '../../Context/AuthContext';
 const ServiceDetails = () => {
     const{user} = useContext(authProvider)
     const sigleSevice = useLoaderData();
-    const {name, description, rating, price, image, _id} = sigleSevice;
+    const {Name, description, rating, price, image, _id} = sigleSevice;
 
     const handleSubmitReview = (e) => {
         e.preventDefault();
@@ -19,7 +19,7 @@ const ServiceDetails = () => {
             email: user.email,
             userName: user.displayName,
             serviceId: _id,
-            serviceName:sigleSevice.name,
+            serviceName:sigleSevice.Name,
             servicePrice: price,
             name,
             rating,
@@ -69,7 +69,7 @@ const ServiceDetails = () => {
                 <div className="mb-16 md:mb-0 md:max-w-xl sm:mx-auto md:text-center">
                     <h3 className='bg-gray-900 text-white p-2 mb-6 text-lg'>Rating by User: {rating}</h3>
                     <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                        {name}
+                        {Name}
                     </h2>
                     <p className="mb-5 text-base text-gray-700 md:text-lg">
                         {description}

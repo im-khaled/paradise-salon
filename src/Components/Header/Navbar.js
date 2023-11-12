@@ -25,7 +25,7 @@ const Navbar = () => {
                     {
                         user?.uid?<>
                             <li><NavLink className='tracking-wider text-gray-900  duration-200 hover:bg-amber-500 hover:rounded-full hover:p-1 hover:px-4 hover:text-white' to='/addService'>Add Service</NavLink></li>
-                            <li><NavLink className='tracking-wider text-gray-900  duration-200 hover:bg-amber-500 hover:rounded-full hover:p-1 hover:px-4 hover:text-white' to='/review'>Review</NavLink></li>
+                            <li><NavLink className='tracking-wider text-gray-900  duration-200 hover:bg-amber-500 hover:rounded-full hover:p-1 hover:px-4 hover:text-white' to='/reviews'>Review</NavLink></li>
                             <li onClick={handleLogOut}><Link className='tracking-wider bg-amber-500 rounded-full p-1 px-4 text-white hover:bg-amber-400'to='/login'>Logout</Link></li>
                         </>:
                         <>

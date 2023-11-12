@@ -4,6 +4,7 @@ import { FaLessThan, FaGreaterThan } from 'react-icons/fa';
 import { authProvider } from '../../Context/AuthContext';
 import Service from '../Services/Service';
 import useTitle from '../Hooks/useTitle';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -43,7 +44,7 @@ const Home = () => {
                     } popularServices={service}></Service>)}
             </div>
             <div className='mt-20 w-52 mx-auto'>
-                <button className='btn bg-amber-500 w-full text-white py-2 text-xl hover:bg-amber-400 rounded-full'>See All Services</button>
+                <Link to='/services'><button className='btn bg-amber-500 w-full text-white py-2 text-xl hover:bg-amber-400 rounded-full'>See All Services</button></Link>
             </div>
         </div>
     );
