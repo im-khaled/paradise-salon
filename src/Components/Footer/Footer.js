@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className='bg-gray-900 w-full p-2 mt-24'>
-            <div className='container-layout mt-16'>
-                <div className='grid grid-cols-6 gap-5 mb-8'>
+            <div className='lg:container-layout mt-16 max-sm:mx-auto max-sm:px-5'>
+                <div className='grid grid-cols-6 gap-5 mb-8 max-sm:grid-cols-1 max-sm:gap-x-0'>
                     <div className='leading-8'>
                         <p className='text-white font-semibold'>Our Barber</p>
                         <ul className='leading-8 text-gray-400'>
@@ -45,7 +45,7 @@ const Footer = () => {
                             <li><Link>Analina Ambecker</Link></li>
                         </ul>
                     </div>
-                    <div className='leading-8 w-full col-span-2 mb-5 ps-2'>
+                    <div className='leading-8 w-full col-span-2 mb-5 ps-2 max-sm:ps-0'>
                         <p className='text-white font-semibold mb-2'>Subscribe for Update</p>
                         <form >
                             <input type="email" name='Email' required placeholder='Email' className='py-1 px-2 w-2/3 rounded' /><br />
@@ -54,7 +54,7 @@ const Footer = () => {
                         <p className='text-gray-400'>Subscribe to our Weekly NewsLater</p>
                     </div>
                 </div>
-                <hr className=' border-gray-600 pb-5 w-full max-sm:mx-5 max-lg:mx-12'/>
+                <hr className=' border-gray-600 pb-5 w-full max-sm:mx-0 max-lg:mx-12'/>
             <div className='flex text-gray-400 justify-between pb-10 max-sm:mx-5 max-lg:mx-12'>
                 <p className='text-sm'>Copyright © 2023 KhaledPxp All Right Reserved!</p>
                 <div className='flex justify-between w-28 max-sm:hidden max-lg:mx-5'>

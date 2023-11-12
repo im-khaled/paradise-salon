@@ -15,7 +15,7 @@ const Home = () => {
         <div>
             <div className='slider w-full relative my-5'>
                 <div id='slide1' className='slider-item w-full'>
-                    <img src="Media/Slides/slide-1.jpg" className='img-size' alt="" />
+                   <img src="Media/Slides/slide-1.jpg" className='img-size' alt="" /> 
                     <div className='flex justify-between absolute left-5 right-5 top-1/2 z-30 text-white '>
                         <a href="#slide3" className='bg-amber-500 p-3 rounded-full hover:bg-amber-400'><FaLessThan></FaLessThan></a>
                         <a href="#slide2" className='bg-amber-500 p-3 rounded-full hover:bg-amber-400'><FaGreaterThan></FaGreaterThan></a>
@@ -39,7 +39,7 @@ const Home = () => {
             <div className='mt-20 mb-10 flex justify-center'>
                 <h2 className='text-2xl font-semibold'>All Time Popular Services</h2>
             </div>
-            <div className='container-layout grid grid-cols-3 gap-5'>
+            <div className='container-layout grid grid-cols-3 gap-5 max-lg:grid-cols-1'>
                   {services.slice(0, 3).map(service => <Service key={service.service_id
                     } popularServices={service}></Service>)}
             </div>

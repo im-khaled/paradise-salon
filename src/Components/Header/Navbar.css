@@ -1,3 +1,20 @@
 .active{
     color: #d7a306;
 }
+.animator{
+    animation: menu-drop 0.5s ;
+
+
+}
+@keyframes menu-drop {
+     0%{
+        transform: translateY(-150%);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+     } 
+     
+     100% {
+      transform: translateY(0%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    } 
+    
+  }
