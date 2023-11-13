@@ -4,6 +4,7 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { authProvider } from '../../Context/AuthContext';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import useTitle from '../Hooks/useTitle';
+import toast from 'react-hot-toast';
 
 const Register = () => {
     useTitle('Register')
@@ -26,23 +27,32 @@ const Register = () => {
         signUpWithEmail(email, password)
             .then(userCredential => {
                 const user = userCredential.user;
+                toast.success('Successfully logged in')
                 nevigate(from, {replace: true} )
             })
-            .catch(e => console.error(e));
+            .catch(e => {
+                toast.error('Something went wrong!')
+                console.error(e)});
     }
     const handleGoogleSignIn = () =>{
         GoogleSignIn(googleProvider)
             .then(result => {
+                toast.success('Successfully logged in')
                 nevigate(from, {replace: true} );
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                toast.error('Something went wrong!')
+                console.error(error)})
     } 
     const handleGithubSignIn = () =>{
         GithubSignIn(githubProvider)
             .then(result => {
+                toast.success('Successfully logged in')
                 nevigate(from, {replace: true} );
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                toast.error('Something went wrong!')
+                console.error(error)})
     } 
 
 

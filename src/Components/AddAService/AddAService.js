@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { authProvider } from '../../Context/AuthContext';
+import toast from 'react-hot-toast';
 
 const AddAService = () => {
     const {user} = useContext(authProvider);
@@ -34,7 +35,7 @@ const AddAService = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    console.log('Service Added Successfully');
+                    toast.success('Service Added Successfully');
                 }
             })
         e.target.reset();

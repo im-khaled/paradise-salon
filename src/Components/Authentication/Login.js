@@ -4,6 +4,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { authProvider } from '../../Context/AuthContext';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import useTitle from '../Hooks/useTitle';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     useTitle('Login');
@@ -24,23 +25,32 @@ const Login = () => {
             .then(userCread => {
                 const user = userCread.user;
                 console.log(user);
+                toast.success('Successfully logged in')
                 nevigate(from, {replace: true} )
             })
-            .catch(e => console.error(e))
+            .catch(e => {
+                toast.error('Something went wrong!')
+                console.error(e)})
     }
     const handleGoogleSignIn = () =>{
         GoogleSignIn(googleProvider)
             .then(result => {
+                toast.success('Successfully logged in')
                 nevigate(from, {replace: true} );
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                toast.error('Something went wrong!')
+                console.error(error)})
     } 
     const handleGithubSignIn = () =>{
         GithubSignIn(githubProvider)
             .then(result => {
+                toast.success('Successfully logged in')
                 nevigate(from, {replace: true} );
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                toast.error('Something went wrong!')
+                console.error(error)})
     } 
     return (
         <div className='flex justify-center mt-10'>
