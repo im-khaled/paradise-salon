@@ -10,13 +10,13 @@ const Blog = () => {
                     <p>Blog</p>
                 </div>
             </div>
-            <div className='mt-20 mx-10 px-4'>
+            <div className='mt-20 mx-10 px-4 max-md:mx-2'>
                 <div className='grid grid-cols-4 py-8 gap-5 border-b'>
-                    <div className='leading-5'>
+                    <div className='leading-5 max-sm:hidden'>
                         <p>SQL & NOSQL</p>
                         <p>7 NOV 2023</p>
                     </div>
-                    <div className='col-span-2'>
+                    <div className='col-span-2 max-lg:col-span-3'>
                         <h1 className='font-bold text-4xl'>Difference between SQL and NoSQL</h1>
                         <div className='text-gray-600'>
                             <p className='py-5'>SQL is the programming language used to interface with relational databases. (Relational databases model data as records in rows and tables with logical links between them). NoSQL is a class of DBMs that are non-relational and generally do not use SQL. The five critical differences between SQL vs NoSQL are:</p>
@@ -31,11 +31,11 @@ const Blog = () => {
                     </div>
                 </div>
                 <div className='grid grid-cols-4 py-8 gap-5 border-b'>
-                    <div className='leading-5'>
+                    <div className='leading-5 max-sm:hidden'>
                         <p>JWT</p>
                         <p>8 NOV 2023</p>
                     </div>
-                    <div className='col-span-2'>
+                    <div className='col-span-2 max-lg:col-span-3'>
                         <h1 className='font-bold text-4xl'>What is JWT, and how does it work?</h1>
                         <div className='text-gray-600'>
                             <p className='py-5'>JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.</p>
@@ -44,11 +44,11 @@ const Blog = () => {
                     </div>
                 </div>
                 <div className='grid grid-cols-4 py-8 gap-5 border-b'>
-                    <div className='leading-5'>
+                    <div className='leading-5 max-sm:hidden'>
                         <p>JAVASCRIPT VS NODE JS</p>
                         <p>9 NOV 2023</p>
                     </div>
-                    <div className='col-span-2'>
+                    <div className='col-span-2 max-lg:col-span-3'>
                         <h1 className='font-bold text-4xl'>
                             What is the difference between javascript and NodeJS?
                         </h1>
@@ -65,11 +65,11 @@ const Blog = () => {
                     </div>
                 </div>
                 <div className='grid grid-cols-4 py-8 gap-5'>
-                    <div className='leading-5'>
+                    <div className='leading-5 max-sm:hidden'>
                         <p>NODE JS FUNCTIONS</p>
                         <p>11 NOV 2023</p>
                     </div>
-                    <div className='col-span-2'>
+                    <div className='col-span-2 max-lg:col-span-3'>
                         <h1 className='font-bold text-4xl'>
                             How does NodeJS handle multiple requests at the same time?
                         </h1>

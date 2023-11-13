@@ -81,7 +81,7 @@ const ServiceDetails = () => {
                     <div className="flex items-center md:justify-center">
                         <Link to='/contact'><button
                             className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-full shadow-sm
-                            bg-gray-900 text-white text-2xl focus:shadow-outline focus:outline-none hover:bg-gray-700"
+                            bg-gray-900 text-white text-2xl focus:shadow-outline focus:outline-none hover:bg-gray-700 max-sm:py-8"
                         >Contact Our Team</button></Link>
                             Get In Touch
                         

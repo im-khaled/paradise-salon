@@ -49,7 +49,7 @@ const AddAService = () => {
                 </div>
             </div>
             <div className='flex justify-center'>
-            <div className='container-layout py-16 w-2/3'>
+            <div className='mx-24 py-16 sm:w-2/3 max-sm:mx-6 max-sm:w-4/5'>
                 <div className=' border p-8 shadow-md'>
                     
                     <form onSubmit={(e) => handleAddSerive(e)}>

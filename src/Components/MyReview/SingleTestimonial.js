@@ -10,7 +10,7 @@ const SingleTestimonial = ({review}) => {
                     <img className=" w-24 rounded-full shadow-md mt-6 mb-4" src={photoUrl} alt="" />
                     <div className='flex flex-col justify-center items-center'>
                         <h4 className="w-full md:w-auto text-xl font-heading font-medium">{name}</h4>
-                        <div className='flex justify-center rounded items-center mt-6 bg-amber-300 px-6'>
+                        <div className='flex justify-center rounded items-center mt-6 bg-amber-300 px-6 max-md:block max-md:py-2'>
                             <p>Your Rating</p>
                             <div className="w-full md:w-px h-2 md:h-8 mx-8 bg-transparent md:bg-gray-900"></div>
                             <span className="mr-4 text-xl font-heading font-medium">{rating} Out of 5.0</span>

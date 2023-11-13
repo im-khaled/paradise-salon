@@ -16,8 +16,8 @@ const Team = () => {
                 <h2 className='mb-5 uppercase font-semibold text-xl' >Discover Our Team</h2>
                 <p>Meet Our Excellent Team & Our Working Environment</p>
             </div>
-            <div className='container-layout py-16'>
-                    <div className='grid grid-cols-4 gap-5'> 
+            <div className='lg:mx-24 py-16 max-sm:mx-0 sm:mx-6'>
+                    <div className='grid md:grid-cols-4 gap-5 max-sm:grid-cols-1 sm:grid-cols-2 '> 
                         <div className='text-center'>
                             <img className='rounded shadow-md mb-5' src="/Media/Images/Corina.jpg" alt="" />
                             <h2 className='text-xl font-semibold'>Corina Ruppel</h2>

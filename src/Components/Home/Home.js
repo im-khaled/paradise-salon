@@ -39,7 +39,7 @@ const Home = () => {
             <div className='mt-20 mb-10 flex justify-center'>
                 <h2 className='text-2xl font-semibold'>All Time Popular Services</h2>
             </div>
-            <div className='container-layout grid grid-cols-3 gap-5 max-lg:grid-cols-1'>
+            <div className='md:mx-24 max-sm:mx-auto grid sm:px-6 lg:grid-cols-3 gap-5 max-lg:grid-cols-1'>
                   {services.slice(0, 3).map(service => <Service key={service.service_id
                     } popularServices={service}></Service>)}
             </div>

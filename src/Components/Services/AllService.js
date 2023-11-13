@@ -14,8 +14,8 @@ const AllService = () => {
                         <p>Serices</p>
                     </div>
             </div>
-            <div className='container-layout py-16'>
-                <div className='grid grid-cols-2 gap-5'>
+            <div className='mx-24 py-16 max-md:mx-6'>
+                <div className='grid lg:grid-cols-2 gap-5 max-lg:grid-cols-1'>
                     <div>
                         <h2 className='uppercase text-amber-400 font-semibold'>Welcome to Paradise Salon</h2>
                         <h1 className='text-4xl font-bold my-5'>List Of Our Services</h1>
@@ -27,7 +27,7 @@ const AllService = () => {
                     </div>
                 </div>
                 <div>
-                <div className=' grid grid-cols-3 gap-5 mt-16 pt-5'>
+                <div className=' grid lg:grid-cols-3 gap-5 mt-16 pt-5 max-sm:grid-cols-1 sm:grid-cols-2'>
                   {services.map(service => <Service key={service.service_id
                     } popularServices={service}></Service>)}
                 </div>

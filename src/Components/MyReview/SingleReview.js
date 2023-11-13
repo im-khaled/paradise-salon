@@ -6,7 +6,7 @@ import "./SingleReview.css"
 const SingleReview = ({handleReviewDelete, review}) => {
     const {serviceName, rating, addedReview, _id ,date} = review;
     return (
-        <table className="table w-4/5 mx-auto my-20 text-left leading-8 col-auto ">
+        <table className="table w-4/5 mx-auto my-20 text-left leading-8 overflow-scroll table-fixed">
             <thead className='bg-gray-100 mb-5 uppercase text-gray-700 '>
                 <tr>
                     <th colSpan='1'>Name</th>

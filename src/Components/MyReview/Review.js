@@ -45,7 +45,7 @@ const Review = () => {
 
     return (
         
-            <div className="overflow-x-hidden w-full">
+        <div className=" overflow-scroll w-full">
             {
                 reviews.length > 0 ?
 
