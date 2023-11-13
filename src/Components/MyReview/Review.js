@@ -19,9 +19,10 @@ const Review = () => {
             return res.json();
         })
         .then(data => {
-            console.log(data);
+
            return setReviews(data);
         })
+        .catch(e => console.error(e))
 
     },[user?.email])
 

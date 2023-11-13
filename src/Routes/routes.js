@@ -13,6 +13,7 @@ import AddAService from '../Components/AddAService/AddAService';
 import ServiceDetails from '../Components/Services/ServiceDetails';
 import Review from '../Components/MyReview/Review';
 import ErrorPage from '../Components/ErrorPage/ErrorPage';
+import UpdateReview from '../Components/MyReview/UpdateReview';
 
 
 
@@ -57,6 +58,11 @@ const routes = createBrowserRouter([
             {
                 path:'/reviews',
                 element:<Review></Review>
+            },
+            {
+                path:'/updatereview/:id',
+                element:<UpdateReview></UpdateReview>,
+                loader: ({params}) => fetch(`http://localhost:8080/updatereview/${params.id}`)
             },
             {
                 path:'/addService',

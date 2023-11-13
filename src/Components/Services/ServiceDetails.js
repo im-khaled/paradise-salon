@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useLoaderData, useLocation } from 'react-router-dom';
 import { authProvider } from '../../Context/AuthContext';
 import Testimonial from '../MyReview/Testimonial';
+import toast from 'react-hot-toast';
 
 const ServiceDetails = () => {
     const location = useLocation();
@@ -42,10 +43,10 @@ const ServiceDetails = () => {
             .then(res => res.json())
             .then(data => {
                 localStorage.setItem('myToken', data.token);
-                console.log(data)
+                
                 if (data.result.acknowledged) {
 
-                    alert('Your Review Submitted Successfully');
+                    toast.success('Your Review Submitted Successfully');
 
 
                 }

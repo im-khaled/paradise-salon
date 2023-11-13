@@ -2,7 +2,7 @@ import React from 'react';
 
 const SingleTestimonial = ({review}) => {
     const{photoUrl, name, rating, addedReview, date} = review; 
-    console.log(photoUrl);
+    
     return (
         <div className="mb-2 shadow-md border rounded overflow-hidden">
             <div className="pt-3 pb-3 md:pb-1 px-4 md:px-16 bg-white bg-opacity-40">
